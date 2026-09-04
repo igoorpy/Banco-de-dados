@@ -9,7 +9,9 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - pgdata:/var/lib/postgresql
+    networks:
+      - minhavrede
 
   pgadmin:
     image: dpage/pgadmin4
@@ -21,6 +23,12 @@ services:
       - "8080:80"
     depends_on:
       - postgres
+    networks:
+      - minhavrede
 
 volumes:
   pgdata:
+
+networks:
+  minhavrede:
+    driver: bridge
