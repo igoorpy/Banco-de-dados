@@ -1,30 +1,27 @@
-# Programação de Banco de Dados
+# Banco de Dados - PostgreSQL e pgAdmin 4 via Docker
 
-Repositório com o conteúdo prático desenvolvido na disciplina de Programação de Banco de Dados, ministrada pelo professor Mateus de Paula. O projeto abrange desde manipulação de banco de dados relacional com Python até conteinerização de ambiente corporativo com Docker.
+Este repositorio contem os scripts e projetos de Banco de Dados desenvolvidos para as atividades praticas da disciplina ministrada pelo professor Mateus de Paula.
 
-## Resumo das Atividades
-### 1 Automação e CRUD com Python (SQLite)
-* Configuração do ambiente virtual (`venv`) e `.gitignore`.
-* Operações de CRUD (Create, Read, Update, Delete) no script `aula1.py`.
+## Resumo das Atividades em Sala de Aula
 
-### 2 Modelagem Relacional e Consultas Avançadas
-* Criação de relacionamentos com Chave Estrangeira (`FOREIGN KEY`) em `aula2.py`.
-* Execução de consultas com `WHERE`, `INNER JOIN`, `GROUP BY` e `HAVING`.
+1. Automacao e CRUD com Python (SQLite)
+   * Configuracao de venv e .gitignore.
+   * Operacoes de CRUD (Create, Read, Update, Delete) no arquivo aula1.py.
 
-### 3 Povoamento em Lote e Agregação
-* Estruturação e povoamento das tabelas `country` e `city` em `atividade.py`.
-* Uso de funções de agregação (`SUM`, `AVG`, `COUNT`) e ordenação (`ORDER BY`).
+2. Modelagem Relacional e Consultas Avancadas
+   * Criacao de relacionamentos com FOREIGN KEY no arquivo aula2.py.
+   * Consultas com WHERE, INNER JOIN, GROUP BY e HAVING.
 
-### 4 Infraestrutura com Docker Compose
-* Configuração do `docker-compose.yml` para orquestração de serviços em rede `bridge`.
-* Subida de contêineres do PostgreSQL (com volume persistente `pgdata`) e pgAdmin 4.
-* Criação e manipulação da tabela `alunos` no banco de dados (`aula_0309.sql`). 
+3. Povoamento em Lote e Agregacao
+   * Povoamento das tabelas country e city no arquivo atividade.py.
+   * Funcoes de agregacao (SUM, AVG, COUNT) e ordenacao (ORDER BY).
 
-### 5 Resolução de Exercícios de Banco de Dados - PostgreSQL & Python
-Este repositório contém a resolução prática da lista de exercícios de Banco de Dados utilizando Python, PostgreSQL e Docker.
+## Lista de Exercicios (Questoes 10, 14 a 20)
 
+Atividade focada na execucao de queries e subconsultas SQL diretamente na interface do pgAdmin 4 via Docker Compose.
 
-## Como Executar o Projeto
-1. **Subir os containers do PostgreSQL e pgAdmin:**
-   ```bash
-   docker compose up -d
+### Estrutura do Projeto
+
+* docker-compose.yml: Configuracao dos servicos PostgreSQL e pgAdmin 4.
+* script_lab4.sql: Script SQL das questoes 10 e 14 a 20 (criacao de tabelas, insercoes e subconsultas).
+
