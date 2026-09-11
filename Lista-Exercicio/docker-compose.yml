@@ -1,0 +1,34 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: meu_postgres
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: adminpassword
+      POSTGRES_DB: meubanco
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql
+    networks:
+      - minhavrede
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: meu_pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: adminpassword
+    ports:
+      - "8080:80"
+    depends_on:
+      - postgres
+    networks:
+      - minhavrede
+
+volumes:
+  pgdata:
+
+networks:
+  minhavrede:
+    driver: bridge
